@@ -13,3 +13,9 @@ th, td {
 th {
     background: #f0f0f0;
 }
+#statusBox {
+    background-color: #d4edda;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}

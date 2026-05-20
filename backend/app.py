@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import sqlite3
+from datetime import datetime
 
 app = Flask(__name__)
 CORS(app)
@@ -94,3 +95,11 @@ def delete_user(user_id):
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
+
+# Вывести время и статус
+@app.route('/status', methods=['GET'])
+def status():
+    return jsonify({
+        "status": "ONLINE",
+        "time": datetime.now().strftime("%H:%M:%S")
+    })

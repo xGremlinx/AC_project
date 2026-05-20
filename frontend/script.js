@@ -82,3 +82,21 @@ async function deleteUser(id) {
 }
 
 loadUsers();
+
+const STATUS_URL = "http://localhost:30050/status";
+
+async function loadStatus() {
+    const response = await fetch(STATUS_URL);
+
+    const data = await response.json();
+
+    document.getElementById("backendStatus").innerText =
+        "Backend Status: " + data.status;
+
+    document.getElementById("serverTime").innerText =
+        "Server Time: " + data.time;
+}
+
+setInterval(loadStatus, 1000);
+
+window.onload = loadStatus;
