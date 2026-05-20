@@ -11,7 +11,7 @@ phases:
       - docker build -t backend-app ./backend
       - docker build -t frontend-app ./frontend
 
-      - docker tag backend-app:latest 082319703213.dkr.ecr.us-east-1.amazonaws.com/backgit add .end-app:latest
+      - docker tag backend-app:latest 082319703213.dkr.ecr.us-east-1.amazonaws.com/backend-app:latest
       - docker tag frontend-app:latest 082319703213.dkr.ecr.us-east-1.amazonaws.com/frontend-app:latest
 
   post_build:
