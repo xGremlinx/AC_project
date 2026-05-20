@@ -25,11 +25,17 @@ spec:
 
           image: 082319703213.dkr.ecr.us-east-1.amazonaws.com/backend-app:latest
 
-          imagePullPolicy: Always
+          imagePullPolicy: Never
 
           ports:
             - containerPort: 5000
 
-    
+          volumeMounts:
+            - name: users-storage
+              mountPath: /app
 
-     
+      volumes:
+        - name: users-storage
+          hostPath:
+            path: /tmp/users-data
+            type: DirectoryOrCreate
