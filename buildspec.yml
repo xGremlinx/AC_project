@@ -19,5 +19,4 @@ phases:
       - docker push 082319703213.dkr.ecr.us-east-1.amazonaws.com/backend-app:latest
       - docker push 082319703213.dkr.ecr.us-east-1.amazonaws.com/frontend-app:latest
       - aws eks update-kubeconfig --region us-east-1 --name AC_EKS_cluster
-      - kubectl apply -f k8s/backend-deployment.yaml
-      - kubectl apply -f k8s/frontend-deployment.yaml
+      - kubectl apply -f ./k8s
