@@ -1,4 +1,4 @@
-const API_URL = "http://backend-service:5000/users";
+const API_URL = "http://aab6a415436674a68966e154c4a57142-1876901185.us-east-1.elb.amazonaws.com/users";
 
 async function loadUsers() {
 
