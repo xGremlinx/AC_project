@@ -1,4 +1,4 @@
-const API_URL = "http://aab6a415436674a68966e154c4a57142-1876901185.us-east-1.elb.amazonaws.com/users";
+const API_URL = "/users";
 
 async function loadUsers() {
 
@@ -83,7 +83,7 @@ async function deleteUser(id) {
 
 loadUsers();
 
-const STATUS_URL = "http://localhost:30050/status";
+const STATUS_URL = "/status";
 
 async function loadStatus() {
     const response = await fetch(STATUS_URL);
