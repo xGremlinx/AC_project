@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:30050/users";
+const API_URL = "http://backend-service:5000/users";
 
 async function loadUsers() {
 
